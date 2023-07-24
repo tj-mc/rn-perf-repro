@@ -48,7 +48,7 @@ const Element = ({native = true}) => {
 
 
   return (
-    <Animated.View style={{ width: size, height: size, backgroundColor: color, transform: [{rotate: spin}] }} />
+    <Animated.View style={{ width: size, height: size, backgroundColor: 'black', transform: [{rotate: spin}] }} />
   );
 };
 
@@ -62,7 +62,7 @@ const Overlay = () => {
       height: 100,
       backgroundColor: 'white',
     }}>
-      <Text>
+      <Text style={{paddingBottom: 20}}>
         Animated on the JS thread
       </Text>
       <Element native={false} infiniteSpin={true}/>
@@ -74,7 +74,7 @@ function App(): JSX.Element {
 
   return (
     <View style={styles.container}>
-      {new Array(300).fill("").map((_, index) => <Element key={index} />)}
+      {new Array(500).fill("").map((_, index) => <Element key={index} />)}
       <Overlay/>
     </View>
   );
