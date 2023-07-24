@@ -74,7 +74,7 @@ function App(): JSX.Element {
 
   return (
     <View style={styles.container}>
-      {new Array(500).fill("").map((_, index) => <Element key={index} />)}
+      {new Array(1000).fill("").map((_, index) => <Element key={index} />)}
       <Overlay/>
     </View>
   );
