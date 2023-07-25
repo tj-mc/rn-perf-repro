@@ -4,7 +4,7 @@ This is a reproducer for performance regressions in React Native, as described b
 
 The main branch is at .68.7. 
 
-1000 views are rendered, each of which contains a timer that runs a state update an animation for that view.
+The intention is to simulate the complexity of a real-world app. To achieve this, 1000 views are rendered, each of which contains a timer that runs a state update an animation for that view.
 The view in the white box is animated using the JS driver, which we use to observe the performance of the JS thread.
 
 Note that smoothness is highest in .68.7, very poor in .70.12, and somewhere in between for .72.3.
